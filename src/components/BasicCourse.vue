@@ -19,7 +19,7 @@
           <li>JavaScript Fundamentals</li>
         </ul>
         <a 
-          href="#contact" 
+          href="mailto:rcpathsala@gmail.com" 
           class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
         >
           Enroll Now
@@ -46,7 +46,7 @@
           <li>Databases: MongoDB & MSSQL</li>
         </ul>
         <a 
-          href="#contact" 
+          href="mailto:rcpathsala@gmail.com" 
           class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition"
         >
           Enroll Now
