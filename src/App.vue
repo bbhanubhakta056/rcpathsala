@@ -53,11 +53,11 @@
           </p>
 
           <!-- Highlights -->
-          <!-- <ul class="list-disc list-inside space-y-2 mb-6">
+          <ul class="list-disc list-inside space-y-2 mb-6">
             <li>👨‍🏫 Expert Trainers</li>
             <li>💻 Hands-on Projects</li>
             <li>🎓 Certificate on Completion</li>
-          </ul> -->
+          </ul>
 
           <!-- Call to Action -->
           <div class="flex flex-col sm:flex-row gap-4">
@@ -80,7 +80,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 text-center py-4">
-      <p>&copy; 2025 MyOffice. All Rights Reserved. <br>™ Trademark Registered</p>
+      <p>&copy; 2025 GTech. All Rights Reserved. <br>™ Trademark Registered</p>
     </footer>
   </div>
 </template>
