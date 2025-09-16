@@ -62,7 +62,7 @@
           <!-- Call to Action -->
           <div class="flex flex-col sm:flex-row gap-4">
             <a
-              href="mailto:rcpathsala@gmail.com"
+              href="#courses"
               class="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-xl hover:bg-yellow-300 transition text-center"
             >
               Enroll Now
@@ -78,6 +78,12 @@
       </div>
     </section>
 
+    <!-- Other Sections -->
+    <section id="courses" class="py-12">
+      <h2 class="text-3xl font-bold text-center mb-8">🎓 Our Courses</h2>
+      <BasicCourse />
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 text-center py-4">
       <p>&copy; 2025 GTech. All Rights Reserved. <br>™ Trademark Registered</p>
@@ -86,4 +92,5 @@
 </template>
 
 <script setup>
+import BasicCourse from './components/BasicCourse.vue';
 </script>
