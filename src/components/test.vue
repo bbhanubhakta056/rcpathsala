@@ -1,139 +1,104 @@
+<script setup>
+const sections = [
+  {
+    id: "html",
+    title: "HTML – Structure of the Web",
+    desc: "Students will learn the building blocks of the web: how to create structured documents, add links, images, and semantic elements that form the foundation of every website.",
+    outcomes: [
+      "Understand the structure of web pages",
+      "Work with links, lists, tables, and forms",
+      "Create semantic and accessible markup"
+    ],
+    image: "https://images.unsplash.com/photo-1611078489935-0cb6a2dd1d1c?q=80&w=800"
+  },
+  {
+    id: "css",
+    title: "CSS – Styling the Web",
+    desc: "Students will learn how to style websites beautifully, from colors, typography, and layouts to animations and responsive design.",
+    outcomes: [
+      "Use modern CSS for layouts (Flexbox & Grid)",
+      "Style text, backgrounds, and components",
+      "Create responsive designs for all devices"
+    ],
+    gallery: [
+      "https://images.unsplash.com/photo-1559027615-ce3a77c9db09?q=80&w=800",
+      "https://images.unsplash.com/photo-1522202222404-54134eab0f07?q=80&w=800",
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800"
+    ]
+  },
+  {
+    id: "javascript",
+    title: "JavaScript – Making Websites Interactive",
+    desc: "Students will dive into programming fundamentals using JavaScript. They will learn how to add interactivity, manipulate content dynamically, and prepare for advanced frameworks.",
+    outcomes: [
+      "Understand programming basics: variables, loops, functions",
+      "Manipulate the DOM and handle events",
+      "Build simple interactive web applications"
+    ],
+    image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?q=80&w=800"
+  }
+]
+</script>
+
 <template>
-  <div class="min-h-screen flex flex-col justify-between bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-    <!-- Header -->
-    <header class="p-6 flex justify-between items-center">
-      <!-- Logo + Name + Address -->
-      <div class="flex items-center space-x-2">
-        <img src="@/assets/logo.jpg" alt="MyOffice Logo" class="h-12 w-auto rounded-lg shadow-md" />
-        <div class="flex flex-col">
-          <span class="text-2xl font-bold">MyOffice</span>
-          <span class="text-sm text-gray-200">Kathmandu, Nepal</span>
-        </div>
-      </div>
-
-      <!-- Navigation -->
-      <nav class="space-x-6 hidden md:flex">
-        <a href="#who-we-are" class="hover:text-yellow-300">Who We Are</a>
-        <a href="#what-we-do" class="hover:text-yellow-300">What We Do</a>
-        <a href="#admission" class="hover:text-yellow-300">Courses</a>
-        <a href="#contact" class="hover:text-yellow-300">Contact</a>
-      </nav>
-    </header>
-
-    <!-- Main "Coming Soon" Section -->
-    <main class="flex flex-col items-center text-center px-6 mt-8">
-      <h2 class="text-5xl md:text-6xl font-extrabold mb-4">🚀 We’re Coming Soon</h2>
-      <p class="text-lg md:text-xl mb-6 max-w-2xl">
-        Our official website is under construction. We’re working hard to give you a great experience.
+  <div class="bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+    <!-- Hero Section -->
+    <section class="text-center py-20 px-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Basic Web Development Course</h1>
+      <p class="text-lg max-w-2xl mx-auto mb-6">
+        Learn the foundations of the web: HTML, CSS, and JavaScript.  
+        From zero to building your own responsive websites.
       </p>
-
-      <!-- Opening Date -->
-      <div class="bg-white text-gray-800 px-6 py-4 rounded-xl shadow-md mb-6">
-        <p class="text-lg font-semibold">
-          🎉 Opening Date: <span class="text-blue-600">December 15, 2025</span>
-        </p>
-      </div>
-
-      <!-- Call to Action -->
-      <a href="#contact" class="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-xl hover:bg-yellow-300 transition">
-        Contact Us
+      <a href="#enroll" class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-100 transition">
+        Enroll Now
       </a>
-    </main>
-
-    <!-- Who We Are -->
-    <section id="who-we-are" class="bg-white text-gray-800 py-12 px-6 text-center">
-      <h3 class="text-3xl font-bold mb-4">Who We Are</h3>
-      <p class="max-w-3xl mx-auto">
-        We are a passionate team building innovative solutions for businesses. 
-        Our mission is to bring efficiency, creativity, and technology together 
-        to create lasting impact.
-      </p>
     </section>
+  </div>
 
-    <!-- What We Do -->
-    <section id="what-we-do" class="bg-gray-100 text-gray-800 py-12 px-6 text-center">
-      <h3 class="text-3xl font-bold mb-4">What We Do</h3>
-      <p class="max-w-3xl mx-auto">
-        We specialize in web development, software solutions, and IT consulting. 
-        From custom applications to digital transformation, we deliver reliable 
-        solutions tailored to your needs.
-      </p>
-    </section>
-
-    <!-- Advertising Banner -->
-    <section id="admission" class="max-w-5xl mx-auto mt-12 px-6">
-      <div class="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center">
-        
-        <!-- Left Image -->
-        <div class="md:w-1/3 w-full">
-          <img
-            src="https://images.unsplash.com/photo-1584697964154-fb95b0c4b8c7?q=80&w=800"
-            alt="Web Development"
-            class="h-64 md:h-full w-full object-cover"
-          />
+  <!-- Course Sections -->
+  <div class="bg-white text-gray-800">
+    <section v-for="(section, index) in sections" :key="section.id" class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <!-- Alternate Layout -->
+      <div v-if="index % 2 === 0">
+        <h2 class="text-3xl font-bold mb-4">{{ section.title }}</h2>
+        <p class="mb-6">{{ section.desc }}</p>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li v-for="o in section.outcomes" :key="o">{{ o }}</li>
+        </ul>
+      </div>
+      <div v-if="index % 2 === 0">
+        <img v-if="section.image" :src="section.image" class="rounded-xl shadow-lg" />
+        <!-- Gallery for CSS -->
+        <div v-if="section.gallery" class="grid grid-cols-3 gap-2">
+          <img v-for="img in section.gallery" :key="img" :src="img" class="rounded-lg shadow-md object-cover" />
         </div>
+      </div>
 
-        <!-- Right Content -->
-        <div class="md:w-2/3 w-full p-8 flex flex-col justify-center">
-          <h2 class="text-3xl md:text-4xl font-extrabold mb-4">📢 Admission Open!</h2>
-          <p class="mb-4 text-lg">
-            Learn from <span class="font-semibold text-yellow-300">Basic Web Development</span> 
-            with <span class="font-semibold">HTML, CSS, JavaScript</span> to 
-            <span class="font-semibold text-yellow-300">Advanced JavaScript Frameworks</span> like 
-            <span class="font-semibold">React.js, Vue.js, Node.js</span> and Databases 
-            <span class="font-semibold">MongoDB & MSSQL</span>.
-          </p>
-
-          <!-- Highlights -->
-          <ul class="list-disc list-inside space-y-2 mb-6">
-            <li>👨‍🏫 Expert Trainers</li>
-            <li>💻 Hands-on Projects</li>
-            <li>🎓 Certificate on Completion</li>
-          </ul>
-
-          <!-- Call to Action -->
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#contact"
-              class="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-xl hover:bg-yellow-300 transition text-center"
-            >
-              Enroll Now
-            </a>
-            <a
-              href="#contact"
-              class="border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-gray-900 transition text-center"
-            >
-              Contact Us
-            </a>
+      <!-- Reversed for odd sections -->
+      <div v-else>
+        <img v-if="section.image" :src="section.image" class="rounded-xl shadow-lg" />
+        <div v-if="section.gallery" class="flex space-x-4">
+          <div v-for="img in section.gallery" :key="img" class="relative w-1/3">
+            <img :src="img" class="rounded-lg shadow-lg object-cover" />
           </div>
         </div>
       </div>
+      <!-- <div v-else>
+        <h2 class="text-3xl font-bold mb-4">{{ section.title }}</h2>
+        <p class="mb-6">{{ section.desc }}</p>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li v-for="o in section.outcomes" :key="o">{{ o }}</li>
+        </ul>
+      </div> -->
     </section>
-
-    <!-- Contact & Location -->
-    <section id="contact" class="bg-white text-gray-800 py-12 px-6 text-center mt-12">
-      <h3 class="text-3xl font-bold mb-4">📍 Contact Us</h3>
-      <p>Email: <a href="mailto:info@myoffice.com" class="text-blue-600">info@myoffice.com</a></p>
-      <p>Phone: +977-123456789</p>
-      <p>Address: Kathmandu, Nepal</p>
-
-      <!-- Google Map Embed -->
-      <div class="mt-6">
-        <iframe
-          class="w-full h-64 rounded-xl shadow-md"
-          src="https://www.google.com/maps/embed?pb=!1m18!..."
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 text-center py-4">
-      <p>&copy; 2025 MyOffice. All Rights Reserved. <br>™ Trademark Registered</p>
-    </footer>
   </div>
-</template>
 
-<script setup>
-</script>
+  <!-- Enroll CTA -->
+  <section id="enroll" class="bg-gray-100 py-16 text-center">
+    <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+    <p class="mb-6 text-gray-700">Course Fee: <span class="font-semibold">Rs. 15,000</span> • Duration: <span class="font-semibold">2 Months</span></p>
+    <a href="/contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+      Contact Us to Enroll
+    </a>
+  </section>
+</template>

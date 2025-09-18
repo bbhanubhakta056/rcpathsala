@@ -18,12 +18,7 @@
           <li>CSS3 & Responsive Design</li>
           <li>JavaScript Fundamentals</li>
         </ul>
-        <a 
-          href="mailto:rcpathsala@gmail.com" 
-          class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
-        >
-          Enroll Now
-        </a>
+        <router-link to="/basic-course" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">See Details</router-link>
       </div>
     </div>
 
@@ -45,12 +40,7 @@
           <li>API Development & Integration</li>
           <li>Databases: MongoDB & MSSQL</li>
         </ul>
-        <a 
-          href="mailto:rcpathsala@gmail.com" 
-          class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition"
-        >
-          Enroll Now
-        </a>
+        <router-link to="/advanced-course" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">See Details</router-link>
       </div>
     </div>
   </div>
