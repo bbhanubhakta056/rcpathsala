@@ -76,4 +76,5 @@ const { title, tagline, fee, duration, sections } = props.course
       Contact Us to Enroll
     </a>
   </section>
+
 </template>
