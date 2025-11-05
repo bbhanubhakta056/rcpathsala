@@ -4,6 +4,7 @@ import BasicCourseDetails from '../components/basic_course/BasicCourseDetails.vu
 import AdvancedCourses from '../components/courses/AdvancedCourses.vue';
 import withwave from '../components/wave/withwave.vue';
 
+// routes
 const routes = [
     { path: '/', component: HomePage},
     { path: '/basic-course', component: BasicCourseDetails},
